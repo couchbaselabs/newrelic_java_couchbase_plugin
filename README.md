@@ -2,12 +2,6 @@
 
 This plugin is based on the New Relic [Java SDK](https://github.com/newrelic-platform/metrics_publish_java).
 
-
-
-----
-
-## 
-
 ----
 
 ## Requirements
