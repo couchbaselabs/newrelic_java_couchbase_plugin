@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project name="wikipedia" default="dist" basedir=".">
 
-    <property name="version" value="2.0.0" />
-    <property name="filename" value="newrelic_wikipedia_plugin-${version}"/>
+    <property name="version" value="0.0.1" />
+    <property name="filename" value="newrelic_couchbase_plugin-${version}"/>
     <property name="jarfile" value="plugin.jar" />
     <property name="tarfile" value="${filename}.tar.gz" />
 
@@ -17,7 +17,7 @@
     <property name="conf.dir" value="config" />
     <property name="dist.dir" location="dist" />
 
-    <property name="sdk.jar" value="${lib.dir}/metrics_publish-2.0.0.jar" />
+    <property name="sdk.jar" value="${lib.dir}/metrics_publish-2.0.1.jar" />
 
     <path id="classpath">
         <pathelement location="${sdk.jar}" />
@@ -49,13 +49,13 @@
         <tstamp />
         <jar destfile="${build.jar.dir}/${jarfile}">
             <manifest>
-                <attribute name="Specification-Title" value="New Relic Platform Wikipedia Example" />
-                <attribute name="Specification-Vendor" value="New Relic, Inc." />
-                <attribute name="Implementation-Vendor" value="New Relic, Inc." />
+                <attribute name="Specification-Title" value="Couchbase Plugin" />
+                <attribute name="Specification-Vendor" value="Couchbase, Inc." />
+                <attribute name="Implementation-Vendor" value="Couchbase, Inc." />
                 <attribute name="Built-Date" value="${TODAY}" />
                 <attribute name="Specification-Version" value="${version}" />
                 <attribute name="Implementation-Version" value="${version} ${TODAY}" />
-                <attribute name="Main-Class" value="com.newrelic.examples.wikipedia.Main" />
+                <attribute name="Main-Class" value="com.couchbase.newrelic.Main" />
             </manifest>
             <fileset dir="${build.classes.dir}"/>
             <zipfileset src="${sdk.jar}" />

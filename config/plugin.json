@@ -1,16 +1,14 @@
 {
   "agents": [
     {
-      "name" : "Wikipedia - English",
-      "host" : "en.wikipedia.org"
+      "name" : "First Kenbook",
+      "host" : "kenbook8u",
+      "port" : 8091
     },
     {
-      "name" : "Wikipedia - French",
-      "host" : "fr.wikipedia.org"
-    },
-    {
-      "name" : "Wikipedia - German",
-      "host" : "de.wikipedia.org"
+      "name" : "Another Kenbook",
+      "host" : "kenbook8u",
+      "port" : 8091
     }
   ]
 }

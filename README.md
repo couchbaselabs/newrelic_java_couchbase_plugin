@@ -1,22 +1,12 @@
-# New Relic Platform Wikipedia Plugin - Java
+# New Relic Plugin for Couchbase
 
-Find the New Relic Wikipedia Example plugin in the [New Relic storefront](http://newrelic.com/plugins/new-relic-inc/8)
+This plugin is based on the New Relic [Java SDK](https://github.com/newrelic-platform/metrics_publish_java).
 
-Find the New Relic Wikipedia plugin in [Plugin Central](https://rpm.newrelic.com/extensions/com.newrelic.examples.wikipedia)
+
 
 ----
 
-## What's new in V2?
-
-This plugin has been upgraded to V2 of the New Relic Platform Java SDK.  For version 2 of the Java SDK, we have made several changes to help make the installation experience more uniform for plugins.  The changes include:
-
-* 'newrelic.properties' file is now 'newrelic.json'
-* Plugin configuration is now done through the 'plugin.json' file
-* Logging has been made more robust and easier to use.
-* Jar distributables now have a well-defined name (i.e. plugin.jar)
-* Configuration files are now located in a well-defined location (i.e. './config' off the root)
-
-More information on these changes (including how to configure logging, license keys, and the plugin itself) can be found [here](https://github.com/newrelic-platform/metrics_publish_java).  If you have any feedback, please don't hesitate to reach out to us through our forums [here](https://discuss.newrelic.com/category/platform-plugins/platform-sdk).
+## 
 
 ----
 
@@ -30,41 +20,7 @@ More information on these changes (including how to configure logging, license k
 
 ## Installation
 
-This plugin can be installed one of the following ways:
-
-* [Option 1 - New Relic Platform Installer](#option-1--install-with-the-new-relic-platform-installer)
-* [Option 2 - Chef and Puppet Install Scripts](#option-2--install-via-chef-or-puppet)
-* [Option 3 - Manual Install](#option-3--install-manually)
-
-### Option 1 - Install with the New Relic Platform Installer
-
-The New Relic Platform Installer (NPI) is a simple, lightweight command line tool that helps you easily download, configure and manage New Relic Platform Plugins.  If you're interested in learning more simply go to [our forum category](https://discuss.newrelic.com/category/platform-plugins/platform-installer) and checkout the ['Getting Started' section](https://discuss.newrelic.com/t/getting-started-for-the-platform-installer/842).  If you have any questions, concerns or feedback, please do not hesitate to reach out through the forums as we greatly appreciate your feedback!
-
-Once you've installed the NPI tool, run the following command:
-
-```
-	./npi install com.newrelic.examples.wikipedia
-```	
-
-This command will take care of the creation of `newrelic.json` and `plugin.json` configuration files.  See the [configuration information](#configuration-information) section for more information.
-
-### Option 2 - Install via Chef or Puppet
-
-For [Chef](http://www.getchef.com) and [Puppet](http://puppetlabs.com) support see the New Relic plugin's [Chef Cookbook](http://community.opscode.com/cookbooks/newrelic_plugins) and [Puppet Module](https://forge.puppetlabs.com/newrelic/newrelic_plugins).
-
-Additional information on using Chef and Puppet with New Relic is available in New Relic's [documentation](https://docs.newrelic.com/docs/plugins/plugin-installation-with-chef-and-puppet).
-
-### Option 3 - Install Manually (Non-standard)
-
-#### Step 1 - Downloading and Extracting the Plugin
-
-The latest version of the plugin can be downloaded [here](https://rpm.newrelic.com/extensions/com.newrelic.examples.wikipedia).  Once the plugin is on your box, extract it to a location of your choosing.
-
-**note** - This plugin is distributed in tar.gz format and can be extracted with the following command on Unix-based systems (Windows users will need to download a third-party extraction tool or use the [New Relic Platform Installer](https://discuss.newrelic.com/t/getting-started-with-the-platform-installer/842)):
-
-```
-	tar -xvzf newrelic_wikipedia_plugin-X.Y.Z.tar.gz
-```
+TBD
 
 #### Step 2 - Configuring the Plugin
 
@@ -111,22 +67,7 @@ The `plugin.json` file has a provided template in the `config` directory named `
 Below is an example of the `plugin.json` file's contents, you can add multiple objects to the "agents" array to monitor different instances:
 
 ```
-{
-  "agents": [
-    {
-      "name" : "Wikipedia - English",
-      "host" : "en.wikipedia.org"
-    },
-    {
-      "name" : "Wikipedia - French",
-      "host" : "fr.wikipedia.org"
-    },
-    {
-      "name" : "Wikipedia - German",
-      "host" : "de.wikipedia.org"
-    }
-  ]
-}
+TBD
 ```
 
 **note** - The "name" attribute is used to identify specific instances in the New Relic UI. 
@@ -195,22 +136,4 @@ Example:
 
 ----
 
-## Support
 
-Plugin support and troubleshooting assistance can be obtained by visiting [support.newrelic.com](https://support.newrelic.com)
-
-### Frequently Asked Questions
-
-**Q: I've started this plugin, now what?**
-
-**A:** Once you have a plugin reporting with the proper license key, log into New Relic [here](http://rpm.newrelic.com).  If everything was successful, you should see a new navigation item appear on the left navigation bar identifying your new plugin (This may take a few minutes).  Click on this item to see the metrics for what you were monitoring (bear in mind, some details -- such as summary metrics -- may take several minutes to show values).
-
-----
-
-## Fork me!
-
-The New Relic Platform uses an extensible architecture that allows you to define new metrics beyond the provided defaults. To expose more data, fork this repository, create a new GUID, add the metrics you would like to collect to the code and then build summary metrics and dashboards to expose your newly collected metrics.
-
-## Contributing
-
-You are welcome to send pull requests to us - however, by doing so you agree that you are granting New Relic a non-exclusive, non-revokable, no-cost license to use the code, algorithms, patents, and ideas in that code in our products if we so choose. You also agree the code is provided as-is and you provide no warranties as to its fitness or correctness for any purpose.
